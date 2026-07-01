@@ -21,7 +21,7 @@ const accountSchema = new mongoose.Schema({
 
     // verify email 
     verification:{
-        verifyCode:{type:String},
+        code: {type:String},
         expiresAt: {type:Date, default: () => (Date.now() + 10 * 60 * 1000 )},
     },
 

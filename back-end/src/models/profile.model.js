@@ -19,13 +19,13 @@ const profileSchema = new mongoose.Schema({
     // profile image
     profileImage: {
         url: { type: String },
-        id: { type: String },
+        id: { type: String, select: false },
     },
     
     // cover image
     coverImage: {
         url: { type: String },
-        id: { type: String },
+        id: { type: String, select: false },
     },
 
     // bio
@@ -50,7 +50,7 @@ const profileSchema = new mongoose.Schema({
         type: String,
     },
 
-    gender: { type: String, enum: ["male", "female"], required: true },
+    gender: { type: String, enum: ["Male", "Female"], required: true },
 
 }, { timestamps: true })
 
