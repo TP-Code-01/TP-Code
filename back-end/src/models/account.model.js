@@ -15,8 +15,8 @@ const accountSchema = new mongoose.Schema({
     // roles
     role:{
         type:String,
-        enum: ["admin", "user"],
-        default: "user"
+        enum: ["Admin", "User"],
+        default: "User"
     },
 
     // verify email 
